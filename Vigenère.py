@@ -27,8 +27,3 @@ def vigenere_encrypt(text, key):
 
 def vigenere_decrypt(text, key):
     return vigenere(text=text, key=key, encrypt=False)
-
-# dec=vigenere_encrypt("fanindra nayak","ga gan")
-# print(dec)
-# dectxt=vigenere_decrypt(dec,"ga gan")
-# print(dectxt)

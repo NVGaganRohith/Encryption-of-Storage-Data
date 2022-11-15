@@ -4,8 +4,7 @@ def CeaserEncrypt(message,key):
     result = ""
 
     for letter in message:
-        if letter in alpha: #if the letter is actually a letter
-            #find the corresponding ciphertext letter in the alphabet
+        if letter in alpha:
             letter_index = (alpha.find(letter) + key) % len(alpha)
 
             result = result + alpha[letter_index]
@@ -20,8 +19,7 @@ def CeaserCipherDecrypt(message,key):
     result = ""
 
     for letter in message:
-        if letter in alpha: #if the letter is actually a letter
-            #find the corresponding ciphertext letter in the alphabet
+        if letter in alpha:
             letter_index = (alpha.find(letter) - key) % len(alpha)
 
             result = result + alpha[letter_index]
