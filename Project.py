@@ -4,8 +4,8 @@ timestamp = int(time() * 1000)
  
 from Ceaser import *
 from Vigenère import *
-from AES import *
-from DES import *
+from aes import *
+from des import *
 from sha import *
 from Tripledes import *
 
