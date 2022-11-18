@@ -55,7 +55,9 @@ def func(PlainText,VignerCipherKey,c,d):
         arr.append("\n\n")
         arr.append("\n\n")
         arr.append("The sha for the aes encrypted text is")
-        shaValue = sha(AesEncrypttedText[1])
+        # print(AesEncrypttedText[1])
+        print("\n\n\n")
+        shaValue = sha(str(AesEncrypttedText[1]).encode())
         arr.append("\n")
         arr.append("Time Stamp is :- ")
         arr.append(timestamp)
@@ -110,6 +112,11 @@ def func(PlainText,VignerCipherKey,c,d):
         arrD = []
         arrD.append("---------------  DECRYPTION  ---------------\n")
         # Step 1 Decrypting received Plain text using AES
+        arrD.append("The sha for the aes encrypted text is")
+        shaValue = sha(str(AesEncrypttedText[1]).encode())
+        arrD.append("\n")
+        arrD.append(shaValue)
+        arrD.append("\n")
 
         AesDecrypttedText = AESDEcryption(AesEncrypttedText[1],AESCipherKey,AesEncrypttedText[0])
 

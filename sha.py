@@ -1,5 +1,7 @@
-import hashlib
-m = hashlib.sha512()
+from hashlib import sha512
 def sha(txt):
-    m.update(txt)
-    return m.digest()
+
+    m=sha512(txt)
+    outp=m.hexdigest()
+    print(outp,"\n\n")
+    return outp
